@@ -15,8 +15,8 @@ def build_custom_logic(green_times, yellow=2):
     return traci.trafficlight.Logic("my", 0, 0, phases1)
 
 def run_simulation(individual,
-                    sumo=("C:\\Program Files (x86)\\Eclipse\\Sumo\\bin\\sumo.exe"),
-                    config_file="D:\\user\\projects\\AI_project\\test_sumo_visual.sumocfg",
+                    sumo=("sumo"),
+                    config_file="data/test_sumo_visual.sumocfg",
                     max_steps=1000):
     
     traci.start([sumo, "-c", config_file, "--start", "--no-step-log", "true", "--duration-log.disable", "true"])
