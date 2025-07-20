@@ -136,8 +136,9 @@ if __name__=="__main__":
     print(f'The best green times for phases: {ObjectivePosition}')
 
     #Simulating
-    config_file="D:\\user\\projects\\AI_project\\test_sumo_visual.sumocfg"
-    traci.start(["C:\\Program Files (x86)\\Eclipse\\Sumo\\bin\\sumo-gui.exe", "-c", config_file])
+    #Replace the paths below with the full path to your own SUMO files (.sumocfg and sumo-gui.exe)
+    config_file="data/test_sumo_visual.sumocfg"
+    traci.start(["sumo-gui", "-c", config_file])
     logic = Fitness.build_custom_logic(ObjectivePosition)
     traci.trafficlight.setProgramLogic(tlsID, logic)
 
